@@ -23,37 +23,37 @@ Before you can use Minikube, you need to have Docker CE (Community Edition) inst
 1. Add the official Docker GPG key:
 
     ```bash
-    $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
     ```
 
 2. Add the Docker repository:
 
     ```bash
-    $ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+     echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
     ```
 
 3. Install the necessary dependencies:
 
     ```bash
-    $ sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release -y
+     sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release -y
     ```
 
 4. Update the package list:
 
     ```bash
-    $ sudo apt-get update
+     sudo apt-get update
     ```
 
 5. Install Docker:
 
     ```bash
-    $ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+     sudo apt-get install docker-ce docker-ce-cli containerd.io -y
     ```
 
 6. Add your user to the docker group:
 
     ```bash
-    $ sudo usermod -aG docker $USER
+     sudo usermod -aG docker $USER
     ```
 
 ## Installing Minikube
@@ -63,19 +63,19 @@ Now, let's install Minikube:
 1. Download the latest Minikube binary:
 
     ```bash
-    $ wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+     wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
     ```
 
 2. Copy the Minikube binary to `/usr/local/bin`:
 
     ```bash
-    $ sudo cp minikube-linux-amd64 /usr/local/bin/minikube
+     sudo cp minikube-linux-amd64 /usr/local/bin/minikube
     ```
 
 3. Give the Minikube executable the proper permissions:
 
     ```bash
-    $ sudo chmod +x /usr/local/bin/minikube
+     sudo chmod +x /usr/local/bin/minikube
     ```
 
 ## Installing kubectl
