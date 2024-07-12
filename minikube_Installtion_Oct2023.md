@@ -85,19 +85,19 @@ Next, we need to install the `kubectl` command-line utility:
 1. Download the binary executable file:
 
     ```bash
-    $ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+     curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
     ```
 
 2. Give the `kubectl` binary executable permission:
 
     ```bash
-    $ chmod +x kubectl
+     chmod +x kubectl
     ```
 
 3. Move the `kubectl` binary to `/usr/local/bin`:
 
     ```bash
-    $ sudo mv kubectl /usr/local/bin/
+     sudo mv kubectl /usr/local/bin/
     ```
 
 ## Starting Minikube
@@ -105,6 +105,6 @@ Next, we need to install the `kubectl` command-line utility:
 You can now start Minikube with the following command:
 
 ```bash
-$ sudo usermod -aG docker $USER && newgrp docker
-$ minikube start --driver=docker
+ sudo usermod -aG docker $USER && newgrp docker
+ minikube start --driver=docker
 
